@@ -1,0 +1,9 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    { "name": "Bloc",     "request": "launch", "type": "dart", "cwd": "apps/trivia_bloc",     "program": "lib/main.dart" },
+    { "name": "Riverpod", "request": "launch", "type": "dart", "cwd": "apps/trivia_riverpod", "program": "lib/main.dart" },
+    { "name": "GetX",     "request": "launch", "type": "dart", "cwd": "apps/trivia_getx",     "program": "lib/main.dart" },
+    { "name": "Provider", "request": "launch", "type": "dart", "cwd": "apps/trivia_provider", "program": "lib/main.dart" }
+  ]
+}
