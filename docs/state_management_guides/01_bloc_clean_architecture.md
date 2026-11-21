@@ -315,6 +315,11 @@ above `<application>` and the cleartext flag on `<application>`:
 </dict>
 ```
 
+it tells iOS to allow the app to make plain `http://` requests.
+
+**Why it's needed:** by default, iOS has a security feature called App Transport Security (ATS). It blocks every network request that isn't encrypted `https://`. Your apps call `http://numbersapi.com`, which is plain http, so without this setting iOS would silently block the request and the app would show a network error.
+
+**What the setting does:** `NSAppTransportSecurity` is the settings group for ATS. Inside it, `NSAllowsArbitraryLoads = true` switches the check off, so the app can connect to any http server.
 **Your own server.** If you run the Number Trivia API yourself (for example on port 8083),
 pass its address when you run the app. `10.0.2.2` is your computer as seen from the
 Android emulator:
