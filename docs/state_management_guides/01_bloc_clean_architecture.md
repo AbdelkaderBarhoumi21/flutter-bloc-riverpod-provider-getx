@@ -441,6 +441,26 @@ class ApiConstants {
 ```
 
 > 🧪 **No test for this file:** constants only. The remote data source test checks the exact URL it calls (Step 13).
+Without `?json`, a request to `http://numbersapi.com/42/trivia` returns only this sentence, with nothing around it:
+
+```text
+42 is the number of spots (or pips, circular patches or pits) on a pair of standard six-sided dice.
+```
+
+With `?json`, `http://numbersapi.com/42/trivia?json` returns the same fact wrapped in labeled fields:
+
+```json
+{
+  "text": "42 is the number of spots (or pips, circular patches or pits) on a pair of standard six-sided dice.",
+  "number": 42,
+  "found": true,
+  "type": "trivia"
+}
+```
+
+With plain text, the app would have to pull the number out of the sentence itself, for example by guessing that the first word is the number. That breaks for random requests such as `1969` or `-5`. With JSON it just reads `json['number']` and `json['text']`.
+
+I wrote the sentence from memory, so the API's real answer may be worded differently. Open the URL in a browser to see a live example.
 
 ### Step 4 — InputConverter: turn the text field into a number
 
