@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 
+/// Base class for all failure types.
 sealed class Failure extends Equatable {
   const Failure();
   @override
