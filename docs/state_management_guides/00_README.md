@@ -7,10 +7,10 @@ it.
 
 | # | Guide | Architecture | Tests |
 | --- | --- | --- | --- |
-| 1 | [01_bloc_clean_architecture.md](docs/01_bloc_clean_architecture.md) | **Clean Architecture**: domain (entities, use cases, repository interface) / data / presentation, `get_it`, `Either` | 61 unit+widget · 4 integration |
-| 2 | [02_riverpod_architecture.md](docs/02_riverpod_architecture.md) | **Feature-first Riverpod architecture**: data / domain / presentation; providers are the DI, `AsyncNotifier` + `AsyncValue` | 53 unit+widget · 4 integration |
-| 3 | [03_getx_pattern.md](docs/03_getx_pattern.md) | **GetX Pattern** (`get_cli` layout): data / modules (bindings · controllers · views) / routes | 53 unit+widget · 4 integration |
-| 4 | [04_provider_mvvm.md](docs/04_provider_mvvm.md) | **MVVM** (Flutter's official architecture guide): `ChangeNotifier` ViewModels, repositories + services, `Result` type | 54 unit+widget · 4 integration |
+| 1 | [01_bloc_clean_architecture.md](01_bloc_clean_architecture.md) | **Clean Architecture**: domain (entities, use cases, repository interface) / data / presentation, `get_it`, `Either` | 61 unit+widget · 4 integration |
+| 2 | [02_riverpod_architecture.md](02_riverpod_architecture.md) | **Feature-first Riverpod architecture**: data / domain / presentation; providers are the DI, `AsyncNotifier` + `AsyncValue` | 53 unit+widget · 4 integration |
+| 3 | [03_getx_pattern.md](03_getx_pattern.md) | **GetX Pattern** (`get_cli` layout): data / modules (bindings · controllers · views) / routes | 53 unit+widget · 4 integration |
+| 4 | [04_provider_mvvm.md](04_provider_mvvm.md) | **MVVM** (Flutter's official architecture guide): `ChangeNotifier` ViewModels, repositories + services, `Result` type | 54 unit+widget · 4 integration |
 
 Do them in order. Guide 1 explains the shared ideas (layers, mocks, fixtures, integration
 tests) in the most detail, and the later guides point out what changes.
