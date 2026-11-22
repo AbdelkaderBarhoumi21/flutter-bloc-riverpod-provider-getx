@@ -3,11 +3,13 @@ import 'package:internet_connection_checker_plus/internet_connection_checker_plu
 import 'package:mocktail/mocktail.dart';
 import 'package:trivia_bloc/core/network/network_info.dart';
 
+class MockInternetConnection extends Mock implements InternetConnection {}
+
 void main() {
   late NetworkInfoImpl networkInfo;
   late InternetConnection mockInternetConnection;
   setUp(() {
-    mockInternetConnection = InternetConnection();
+    mockInternetConnection = MockInternetConnection();
     networkInfo = NetworkInfoImpl(mockInternetConnection);
   });
 
